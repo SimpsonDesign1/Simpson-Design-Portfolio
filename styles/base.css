@@ -14,6 +14,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+/* Is this the correct CSS code for font awesome? */
+
+/* @font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;font-display:block;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands";font-weight:400} */
+
 * {
     margin: 0;
     padding: 0;
@@ -89,8 +94,8 @@ aside {
   margin-top: 70px;
 }
 
-.linked-in-icon {
-
+.fab-fa-linkedin {
+/* need to get this placed below the profile image */
 }
 
 h1 {
@@ -160,14 +165,6 @@ article.main {
   /* margin: 0 auto; /* Center it */ */
   /* padding: 70px; */
 }
-.case-study4 {
-  position: relative;
-  max-width: 1110px; /* Maximum width */
-  margin: 70px;
-  /* margin: 0 auto; /* Center it */ */
-  /* padding: 70px; */
-}
-
 /* question: how do I get the background of text box to span 100% of just the image box? */
 .case-study3 .content3 {
   position: absolute; /* Position the background text */
@@ -177,9 +174,32 @@ article.main {
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1; /* Grey text */
   width: 100%; /* use 100% for Full width */
+  height: 100%;
   padding: 30px; /* Some padding */
+  opacity: 0;
+}
+.case-study3 > .content3:hover {
+  opacity: 1;
+}
+.content3 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.content3 a {
+  text-decoration: none;
+  color: white;
 }
 
+
+.case-study4 {
+  position: relative;
+  max-width: 1110px; /* Maximum width */
+  margin: 70px;
+  /* margin: 0 auto; /* Center it */ */
+  padding: 70px;
+}
 /* question: how do I get the background of text box to span 100% of just the image box? */
 .case-study4 .content4 {
   position: absolute; /* Position the background text */
@@ -189,15 +209,24 @@ article.main {
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1; /* Grey text */
   width: 100%; /* Full width */
+  height: 100%;
   padding: 30px; /* Some padding */
+  opacity: 0;
+}
+.case-study4 > .content4:hover {
+  opacity: 1;
+}
+.content4 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 }
 .content4 a {
   text-decoration: none;
   color: white;
 }
-.content4 a:hover {
-  /* how do I set this up? */
-}
+
 
 
 
