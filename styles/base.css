@@ -174,12 +174,12 @@ article.main {
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1; /* Grey text */
   width: 100%; /* use 100% for Full width */
-  height: 100%;
+  height: 30%;
   padding: 30px; /* Some padding */
-  opacity: 0;
-}
-.case-study3 > .content3:hover {
   opacity: 1;
+}
+/* .case-study3 > .content3:hover { */
+  /* opacity: 1; */
 }
 .content3 {
   display: flex;
@@ -197,7 +197,7 @@ article.main {
   position: relative;
   max-width: 1110px; /* Maximum width */
   margin: 70px;
-  /* margin: 0 auto; /* Center it */ */
+  /* margin: 0 auto; /* Center it */
   padding: 70px;
 }
 /* question: how do I get the background of text box to span 100% of just the image box? */
@@ -209,9 +209,9 @@ article.main {
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1; /* Grey text */
   width: 100%; /* Full width */
-  height: 100%;
+  height: 30%;
   padding: 30px; /* Some padding */
-  opacity: 0;
+  opacity: 1;
 }
 .case-study4 > .content4:hover {
   opacity: 1;
@@ -260,4 +260,42 @@ now add in the responsive to desktop rules
       /* allows items to take up a third of the available space and not shrink or grow */
     }
 
+    .case-study3 .content3 {
+      position: absolute; /* Position the background text */
+      top: 0px; /* Use bottom to align to bottom. Use top:0 to append it to the top */
+      left: 0px;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1; /* Grey text */
+      width: 100%; /* use 100% for Full width */
+      height: 100%;
+      padding: 30px; /* Some padding */
+      opacity: 0;
+      align-items: stretch;
+      justify-content:center;
+      }
+
+      .case-study3 > .content3:hover {
+      opacity: 1;
+    }
+
+
+      .case-study4 .content4 {
+        position: absolute; /* Position the background text */
+        top: 0px; /* Use bottom to align to bottom. Use top:0 to append it to the top */
+        left: 0px;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1; /* Grey text */
+        width: 100%; /* use 100% for Full width */
+        height: 100%;
+        padding: 30px; /* Some padding */
+        opacity: 0;
+        align-items: stretch;
+        justify-content: center;
+        }
+
+      .case-study4 > .content4:hover {
+        opacity: 1;
+      }
 }
