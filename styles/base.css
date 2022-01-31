@@ -60,8 +60,8 @@ header {
 
 }
 footer {
-  background: gray;
-  font-size: 1.5rem;
+  /* background: gray; */
+  /* font-size: 1.5rem; */
 }
 
 main {
@@ -92,8 +92,12 @@ aside {
 .profile-text {
   padding: 0 30 0;
   margin-top: 70px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
 }
-
+.profile-text h1 {
+  font-size: 20px;
+}
 .fab-fa-linkedin {
 /* need to get this placed below the profile image */
 }
@@ -152,82 +156,61 @@ nav a:hover {
 
 article.main {
   background: white;
-  flex: 1; /* setting this overrides the main above and gives the article the command to take up the majority of the vertical container space. normally 2 items set to 1 will divide by 50% each */
+  overflow-y: scroll;
+  /* flex: 1; /* setting this overrides the main above and gives the article the command to take up the majority of the vertical container space. normally 2 items set to 1 will divide by 50% each */ */
+  /* flex-direction: column; */
 }
 
 
-/* trying to add images in html vs. background ************** */
 
-.case-study3 {
+/* NEW simpler way to style clickable image overlays */
+
+.image1 {
   position: relative;
-  max-width: 1110px; /* Maximum width - question do I need to specify a max width? */
+  max-width: 1110px;
   margin: 70px;
-  /* margin: 0 auto; /* Center it */ */
-  /* padding: 70px; */
 }
-/* question: how do I get the background of text box to span 100% of just the image box? */
-.case-study3 .content3 {
-  position: absolute; /* Position the background text */
-  top: 0px; /* Use bottom to align to bottom. Use top:0 to append it to the top */
-  left: 0px;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* use 100% for Full width */
-  height: 30%;
-  /* height: 100%; */
-  padding: 30px; /* Some padding */
-  opacity: 1;
+.image__img {
+  display: block;
+  width: 100%
 }
-/* .case-study3 > .content3:hover { */
-  /* opacity: 1; */
-}
-.content3 {
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: Montserrat, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s
 }
-.content3 a {
+.image__title {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+.image__overlay > * {
+    transition: transform 0.25s;
+}
+.image__overlay a {
   text-decoration: none;
   color: white;
 }
-
-
-.case-study4 {
-  position: relative;
-  max-width: 1110px; /* Maximum width */
-  margin: 70px;
-  /* margin: 0 auto; /* Center it */*/
-  padding: 70px;
-}
-/* question: how do I get the background of text box to span 100% of just the image box? */
-.case-study4 .content4 {
-  position: absolute; /* Position the background text */
-  top: 0px; /* At the bottom. Use top:0 to append it to the top */
-  left: 0px;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  height: 30%;
-  /* height: 100%; */
-  padding: 30px; /* Some padding */
+.image__overlay:hover {
   opacity: 1;
 }
-.case-study4 > .content4:hover {
-  opacity: 1;
-}
-.content4 {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-}
-.content4 a {
-  text-decoration: none;
-  color: white;
-}
+
 
 
 
@@ -261,43 +244,4 @@ now add in the responsive to desktop rules
       flex: 0 0 35%;
       /* allows items to take up a third of the available space and not shrink or grow */
     }
-
-    .case-study3 .content3 {
-      position: absolute; /* Position the background text */
-      top: 0px; /* Use bottom to align to bottom. Use top:0 to append it to the top */
-      left: 0px;
-      background: rgb(0, 0, 0); /* Fallback color */
-      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-      color: #f1f1f1; /* Grey text */
-      width: 100%; /* use 100% for Full width */
-      height: 100%;
-      padding: 30px; /* Some padding */
-      opacity: 0;
-      align-items: stretch;
-      justify-content: center;
-      }
-
-      .case-study3 > .content3:hover {
-      opacity: 1;
-    }
-
-
-      .case-study4 .content4 {
-        position: absolute; /* Position the background text */
-        top: 0px; /* Use bottom to align to bottom. Use top:0 to append it to the top */
-        left: 0px;
-        background: rgb(0, 0, 0); /* Fallback color */
-        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-        color: #f1f1f1; /* Grey text */
-        width: 100%; /* use 100% for Full width */
-        height: 100%;
-        padding: 30px; /* Some padding */
-        opacity: 0;
-        align-items: stretch;
-        justify-content: center;
-        }
-
-      .case-study4 > .content4:hover {
-        opacity: 1;
-      }
 }
