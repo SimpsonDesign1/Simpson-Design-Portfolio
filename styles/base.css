@@ -30,6 +30,7 @@ body {
   display: flex; /* entire page is parent of header main and footer */
   min-height: 100vh; /* shortand for 100% vetical height */
   flex-direction: column;
+  }
 }
 
 
@@ -79,27 +80,26 @@ aside {
   align-items: center;
   color: white;
   text-align: center;
-  padding: 40px;
-
+  padding: 20px;
 }
-
 .profile-image {
   margin-top: 60px;
   /* width: 100px; */
   /* height: auto; */
 }
-
 .profile-text {
-  padding: 0 30 0;
+  /* padding: 0 30 0; */
   margin-top: 70px;
   font-family: Montserrat, sans-serif;
   font-weight: 700;
 }
 .profile-text h1 {
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.5rem;
 }
-.fab-fa-linkedin {
-/* need to get this placed below the profile image */
+.svg {
+  width: 35px;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -117,7 +117,7 @@ h3 {
 nav {
   text-align: center;
   width: 100%;
-  /* margin: 100 0 auto; */
+  margin: 100 0 auto;
   /* border: 1px solid blue; */
   /* padding: 1rem; */
 }
@@ -127,8 +127,8 @@ nav ul {
   /* margin: 1rem auto; */
   /* background-color: #eee; */
   background-image: ;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 nav li {
   display: inline-block; /* makes the navigation horizontal */
@@ -137,12 +137,12 @@ nav li {
   /* border: 1px solid red; */
 }
 nav li:hover {
-  color:
+  /* color: */
 }
 nav a {
   text-decoration: none; /* gets rid of navigation underlines */
   color: white;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 800;
 }
 nav a:focus {
@@ -168,14 +168,14 @@ article.main {
 .image1 {
   position: relative;
   max-width: 1110px;
-  margin: 70px;
+  margin: 20px;
 }
 .image__img {
   display: block;
   width: 100%
 }
 .image__overlay {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -187,16 +187,17 @@ article.main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  padding: 10px;
+  /* opacity: 0; */
   transition: opacity 0.25s
 }
 .image__title {
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: 700;
     text-align: center;
 }
 .image__description {
-    font-size: 1.25em;
+    font-size: 1em;
     margin-top: 0.5em;
     text-align: center;
 }
@@ -208,8 +209,123 @@ article.main {
   color: white;
 }
 .image__overlay:hover {
-  opacity: 1;
+  /* opacity: 1; */
 }
+
+/* UX Case Study Hero */
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 70px 1fr 1fr;
+  grid-template-areas:
+  "hamburger hamburger hamburger hamburger"
+  "casestudy-hero1 casestudy-hero1 casestudy-hero1 casestudy-hero1"
+  "casestudy-content casestudy-content casestudy-content casestudy-content";
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
+  overflow: scroll;
+  /* margin: 0 auto; */
+}
+.hamburger {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 1;
+  background-color: aquamarine;
+  /* max-width: 1400px; */
+}
+.hamburger ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 20px;
+}
+.hamburger-item > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.casestudy-hero1 {
+  /* background-color: blue; */
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 2;
+  display: block;
+  /* position: relative; */
+  /* max-width: 1400px; */
+  /* height: 500px; */
+  /* margin: 0 auto; */
+}
+.casestudy-content {
+  background-color: brown;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 3;
+  /* max-width: 1400px; */
+}
+
+.hero1 {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-areas:
+  "hamburger-nav hamburger-nav hamburger-nav hamburger-nav"
+  "casestudy-hero casestudy-hero casestudy-hero casestudy-hero"
+  ;
+  width: 100vw;
+  height: 100vh;
+}
+.casestudy-hero {
+  position: relative;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+}
+.casestudy__img {
+  display: block;
+  width: 100%
+}
+.casestudy__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.6); */
+  color: white;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 20px;
+  /* opacity: 0; */
+  transition: opacity 0.25s
+}
+.casestudy__title {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: left;
+}
+.casestudy__description {
+    font-size: 1.25em;
+    margin-top: 0.5em;
+    text-align: left;
+}
+.casestudy__overlay > * {
+    transition: transform 0.25s;
+}
+.casestudy__overlay a {
+  text-decoration: none;
+  color: white;
+}
+.casestudy__overlay:hover {
+  /* opacity: 1; */
+}
+
+
 
 
 
@@ -234,6 +350,33 @@ now add in the responsive to desktop rules
 
 ****************************************************** */
 
+@media (min-width: 450px) {
+  .profile-text h1 {
+    font-size: 18px;
+    line-height: 1.7rem;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .profile-text h1 {
+    font-size: 20px;
+    line-height: 2rem;
+  }
+  aside {
+    padding: 30px;
+  }
+  nav ul {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  nav li {
+    padding: 20px 7px;
+  }
+}
+
 @media (min-width: 1100px) {
     main {
       width: 100%; /* makes main container use 80% of the page width - responsive */
@@ -243,5 +386,46 @@ now add in the responsive to desktop rules
     aside {
       flex: 0 0 35%;
       /* allows items to take up a third of the available space and not shrink or grow */
+    }
+    .profile-text h1 {
+      font-size: 24px;
+      line-height: 2rem;
+    }
+    .image__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-family: Montserrat, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* padding: 10px; */
+      opacity: 0;
+      transition: opacity 0.25s
+    }
+    .image__title {
+        font-size: 2em;
+        font-weight: 700;
+        text-align: center;
+    }
+    .image__description {
+        font-size: 1.25em;
+        margin-top: 0.5em;
+        text-align: center;
+    }
+    .image__overlay > * {
+        transition: transform 0.25s;
+    }
+    .image__overlay a {
+      text-decoration: none;
+      color: white;
+    }
+    .image__overlay:hover {
+      opacity: 1;
     }
 }
