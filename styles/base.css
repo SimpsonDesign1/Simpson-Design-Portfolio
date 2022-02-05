@@ -225,7 +225,7 @@ article.main {
 .container-hero {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 0px 1fr;
   height: auto;
   width: 100vw;
   margin-bottom: 50px;
