@@ -75,7 +75,7 @@ main {
 
 aside {
   background: #262f34;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   color: white;
@@ -96,6 +96,7 @@ aside {
 .profile-text h1 {
   font-size: 16px;
   line-height: 1.5rem;
+  color: white;
 }
 .svg {
   width: 35px;
@@ -106,10 +107,17 @@ h1 {
   font-family: Montserrat, sans-serif;
   font-size: 1.8rem;
   line-height: 2.5rem;
+  color: #2D2F30;
 }
 h3 {
   font-size: 1.5rem;
   font-weight: 200;
+}
+p {
+  font-size: 1em;
+  line-height: 1.3em;
+  color: #2D2F30;
+  margin-top: .7em;
 }
 
 /* navigation CSS section **************** */
@@ -124,9 +132,8 @@ nav {
 nav ul {
   list-style-type: none; /* gets rid of bullets */
   /* border: 1px solid #333; */
-  /* margin: 1rem auto; */
+  margin: 1rem auto;
   /* background-color: #eee; */
-  background-image: ;
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -200,6 +207,7 @@ article.main {
     font-size: 1em;
     margin-top: 0.5em;
     text-align: center;
+    color: white;
 }
 .image__overlay > * {
     transition: transform 0.25s;
@@ -214,41 +222,45 @@ article.main {
 
 /* UX Case Study Hero */
 
-
-
-.container {
+.container-hero {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 70px 1fr 1fr;
-  grid-template-areas:
-  "hamburger hamburger hamburger hamburger"
-  "casestudy-hero1 casestudy-hero1 casestudy-hero1 casestudy-hero1"
-  "casestudy-content casestudy-content casestudy-content casestudy-content";
-  height: 100vh;
+  grid-template-rows: 100px 1fr;
+  height: auto;
   width: 100vw;
-  background-color: antiquewhite;
-  overflow: scroll;
-  /* margin: 0 auto; */
+  margin-bottom: 50px;
+  /* background-color: antiquewhite; */
+  /* overflow: scroll; */
 }
-.hamburger {
+
+header {
+  text-align: center;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row: 1;
-  background-color: aquamarine;
-  /* max-width: 1400px; */
 }
-.hamburger ul {
+header > ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   list-style-type: none;
+  margin-top: none;
+  margin-bottom: none;  
+  background-color: #2D2F30;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  font-size: .8rem;
+  font-weight: 800;
   padding: 20px;
 }
-.hamburger-item > a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 700;
+header a:hover {
+  color: #ADC440;
 }
+
 .casestudy-hero1 {
   /* background-color: blue; */
   grid-column-start: 1;
@@ -257,15 +269,22 @@ article.main {
   display: block;
   /* position: relative; */
   /* max-width: 1400px; */
-  /* height: 500px; */
+  /* height: auto; */
   /* margin: 0 auto; */
 }
-.casestudy-content {
-  background-color: brown;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 3;
-  /* max-width: 1400px; */
+.casestudy-section1 {
+  /* background-color: lightblue; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "img_left img_left img_left img_left "
+  "img_right img_right img_right img_right"
+  "4-col 4-col 4-col 4-col"
+  "inline-nav inline-nav inline-nav inline-nav";
+  max-width: 80%;
+  margin:0 auto;
+  grid-row-gap: 100px;
 }
 
 .hero1 {
@@ -313,6 +332,7 @@ article.main {
     font-size: 1.25em;
     margin-top: 0.5em;
     text-align: left;
+    color: white;
 }
 .casestudy__overlay > * {
     transition: transform 0.25s;
