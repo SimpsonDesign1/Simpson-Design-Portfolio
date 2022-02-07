@@ -246,14 +246,14 @@ article.main {
   /* background-color: lightblue; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
   "img_left img_left img_left img_left "
   "img_right img_right img_right img_right";
   max-width: 80%;
   /* height: auto; */
   margin:0 auto;
-  /* grid-row-gap: 60px; */
+  grid-row-gap: 70px;
 }
 
 .hero1 {
