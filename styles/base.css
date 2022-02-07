@@ -182,7 +182,7 @@ article.main {
   width: 100%
 }
 .image__overlay {
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -223,68 +223,37 @@ article.main {
 /* UX Case Study Hero */
 
 .container-hero {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0px 1fr;
   height: auto;
   width: 100vw;
   margin-bottom: 50px;
-  /* background-color: antiquewhite; */
-  /* overflow: scroll; */
 }
-
-header {
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 1;
-}
-header > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  list-style-type: none;
-  margin-top: none;
-  margin-bottom: none;  
-  background-color: #2D2F30;
-}
-header a {
-  text-decoration: none;
-  color: white;
-  font-size: .8rem;
-  font-weight: 800;
-  padding: 20px;
-}
-header a:hover {
-  color: #ADC440;
-}
-
 .casestudy-hero1 {
   /* background-color: blue; */
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row: 2;
+  /* grid-column-start: 1; */
+  /* grid-column-end: 5; */
+  /* grid-row: 2; */
   display: block;
   /* position: relative; */
   /* max-width: 1400px; */
   /* height: auto; */
-  /* margin: 0 auto; */
+  margin-top: 75px;
+  margin-bottom: 50px;
 }
 .casestudy-section1 {
   /* background-color: lightblue; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-template-areas:
   "img_left img_left img_left img_left "
-  "img_right img_right img_right img_right"
-  "4-col 4-col 4-col 4-col"
-  "inline-nav inline-nav inline-nav inline-nav";
+  "img_right img_right img_right img_right";
   max-width: 80%;
+  /* height: auto; */
   margin:0 auto;
-  grid-row-gap: 100px;
+  /* grid-row-gap: 60px; */
 }
 
 .hero1 {
@@ -312,7 +281,7 @@ header a:hover {
   left: 0;
   width: 50%;
   height: 100%;
-  /* background: rgba(0, 0, 0, 0.6); */
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   font-family: Montserrat, sans-serif;
   display: flex;

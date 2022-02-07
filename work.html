@@ -98,7 +98,6 @@ height: auto;
   width: 50%;
   margin-left: 20px;
 }
-
 .img_right {
 grid-column-start: 1;
 grid-column-end: 5;
@@ -124,11 +123,6 @@ height: auto;
   line-height: 1.25em;
   margin-left: 20px;
 }
-}
-
-.4-col {
-  height: 200px;
-}
 
 /* new hamburger menu styles - boilerplate ****************/
 
@@ -142,8 +136,8 @@ height: auto;
   bottom: 400;
   z-index: 99;
   background: #2D2F30;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
   text-align: center;
   line-height: 3rem;
   list-style: none;
@@ -168,23 +162,23 @@ height: auto;
 .hamburger {
   position: fixed;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   z-index: 100;
-  top: 3rem;
-  left: 3rem;
-  padding: 10px;
+  width: 100vw;
+  /* top: 3rem; */
+  /* left: 3rem; */
+  padding-left: 30px;
+  height: 75px;
   cursor: pointer;
-  background: rgba(176, 175, 175, 0.3);
-  border-radius: 10px;
+  background: #2D2F30;
+  /* border-radius: 10px; */
   border: none;
 }
 .hamburger > h4 {
-  /* color: white; */
+  color: white;
   text-shadow: 2px 3px 8px gray;
   order: 1;
-}
-.hamburger:hover {
-  /* color: #2D2F30; */
 }
 .menuIcon {
   width: 32px;
@@ -193,21 +187,131 @@ height: auto;
   display: none;
 }
 .material-icons {
-  /* color: white; */
+  color: white;
   text-shadow: 2px 3px 8px gray;
 }
 .burger-menu {
-  background-color: rgb(41, 101, 154);
   display: block;
   position: relative;
 }
 
-/* my additional hamburger menu styles ******************/
+@media (max-width: 600px){
+.hamburger {
+  padding: 20px;
+  height: 50px;
+}
+
+.casestudy-hero1 {
+  /* background-color: blue; */
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 2;
+  display: block;
+  /* position: relative; */
+  /* max-width: 1400px; */
+  /* height: auto; */
+  margin-top: 50px;
+}
+
+.csimage__overlay {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 20px;
+  /* opacity: 0; */
+  transition: opacity 0.25s
+}
+.csimage__title {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+.csimage__description {
+    font-size: 1.25em;
+    margin-top: 0em;
+    text-align: center;
+    color: white;
+}
+.casestudy-section1 {
+  grid-row-gap: 0px;
+  max-width: 90%;
+}
+}
+
+@media (max-width: 1000px){
+.casestudy-section1 {
+  grid-row-gap: 0px;
+  max-width: 80%;
+}
+  .img_left {
+/* grid-column-start: 1; */
+/* grid-column-end: 5; */
+grid-row: 1;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+padding: 20px;
+height: auto;
+margin-bottom: 80px;
+}
+.image-left {
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
+  margin: 0px;
+}
+.text-right {
+  width: 100%;
+  margin: 0px;
+}
+.img_right {
+/* grid-column-start: 1; */
+/* grid-column-end: 5; */
+grid-row: 2;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+padding: 20px;
+height: auto;
+}
+.image-right {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  order: 1;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+.text-left {
+  width: 100%;
+  margin-right: 0px;
+  order: 2;
+}
+.text-left > ul {
+  line-height: 1.25em;
+  /* margin-left: 20px; */
+}
+.casestudy-section1 {
+  grid-row-gap: 0px;
+}
+
+}
 
 
 </style>
-
 </head>
+
 <body>
 
   <!-- hamburger menu test -->
@@ -226,19 +330,7 @@ height: auto;
     </button>
   </div>
 
-
-
-  <!-- case study hero grid with image and navigation above -->
-
-<div class="container-hero">
-  <header class="case-nav" background-color="#2D2F30">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Resume</a></li>
-    </ul>
-  </header>
+  <!-- Case Study Hero Image and Overlay Text -->
   
   <div class="casestudy-hero1">
     <img class="csimage__img" src="images/BSP_CS_Covers2.jpg">
@@ -247,7 +339,6 @@ height: auto;
       <p class="csimage__description">Website Redesign UX Case Study</p>
     </div>
   </div>
-</div>
 
 <!-- case study materials section starts -->
 
@@ -277,22 +368,6 @@ height: auto;
         <li>Use beautiful, compelling imagery throughout the site</li>
         </ul></p>
     </div>
-  </div>
-    <div class="4-col">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="inline-nav">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
 
 
   <script>
